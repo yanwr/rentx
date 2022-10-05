@@ -6,7 +6,7 @@ export default class CreateCategoryFromFileController {
         private readonly createCategoryFromFileUseCase: CreateCategoryFromFileUseCase
     ) {}
 
-    async handle(request: Request, response: Response) {
+    handle(request: Request, response: Response) {
         const { file } = request;
 
         this.createCategoryFromFileUseCase.excute(file);

@@ -9,11 +9,11 @@ const findAllCategoryController = CategoryControllerCreator.findAllCategoryContr
 const createCategoryFromFileController = CategoryControllerCreator.createCategoryFromFileController;
 
 categoryRoutes.get("/categories", (request, response) => {
-    return createCategoryController.handle(request, response);
+    return findAllCategoryController.handle(request, response);
 });
 
 categoryRoutes.post("/categories", (request, response) => {
-    return findAllCategoryController.handle(request, response);
+    return createCategoryController.handle(request, response);
 });
 
 const upload = multer({

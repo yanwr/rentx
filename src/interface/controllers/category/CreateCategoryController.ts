@@ -6,7 +6,7 @@ export default class CreateCategoryController {
         private readonly createCategoryUseCase: CreateCategoryUseCase
     ) {}
 
-    async handle(request: Request, response: Response) {
+    handle(request: Request, response: Response) {
         const { name, description } = request.body;
 
         this.createCategoryUseCase.excute({ name, description });
