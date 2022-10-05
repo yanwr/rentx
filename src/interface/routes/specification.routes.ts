@@ -7,10 +7,10 @@ const createSpecificationController = SpecificationControllerCreator.createSpeci
 const findAllSpecificationController = SpecificationControllerCreator.findAllSpecificationController
 
 specificationRoutes.get("/specifications", (request, response) => {
-    return createSpecificationController.handle(request, response);
+    return findAllSpecificationController.handle(request, response);
 });
 specificationRoutes.post("/specifications", (request, response) => {
-    return findAllSpecificationController.handle(request, response);
+    return createSpecificationController.handle(request, response);
 });
 
 export default specificationRoutes;
