@@ -17,7 +17,10 @@
     "uuid": "^9.0.0"
   },
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modeles --respawn src/server.ts"
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modeles --respawn src/server.ts",
+    "typeorm": "typeorm-ts-node-esm -d ./src/infrastructure/database/index.ts",
+    "migration:generate": "typeorm-ts-node-esm -d ./src/infrastructure/database/index.ts migration:generate ./src/infrastructure/database/migrations/deafult",
+    "migration:run": "typeorm-ts-node-esm -d ./src/infrastructure/database/index.ts migration:run"
   },
   "devDependencies": {
     "@types/csv-parse": "^1.2.2",
